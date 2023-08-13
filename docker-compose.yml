@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  postgres-compose:
+    image: postgres
+    environment:
+      POSTGRES_DB: donna
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: "Postgres2023!"
+      PGDATA: /data/postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres:/data/postgres
+    networks:
+      - postgres-network
+
+  pgadmin-compose:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "donna@gmail.com"
+      PGADMIN_DEFAULT_PASSWORD: "PgAdmin2023!"
+    ports:
+      - "15432:80"
+    depends_on:
+      - postgres-compose
+    networks:
+      - postgres-network
+
+networks:
+  postgres-network:
+    driver: bridge
+
+volumes:
+  postgres:
