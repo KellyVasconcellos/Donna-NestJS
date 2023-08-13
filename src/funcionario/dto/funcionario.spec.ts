@@ -1,7 +1,7 @@
-import { Funcionario } from './funcionario.dto';
+import { FuncionarioDto } from './funcionario.dto';
 
 describe('Funcionario', () => {
   it('should be defined', () => {
-    expect(new Funcionario()).toBeDefined();
+    expect(new FuncionarioDto()).toBeDefined();
   });
 });
