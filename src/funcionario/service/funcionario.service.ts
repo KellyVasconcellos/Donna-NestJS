@@ -6,18 +6,16 @@ import { FuncionarioEntity } from '../entity/funcionario.entity';
 
 @Injectable()
 export class FuncionarioService {
-
     constructor(
         @InjectRepository(FuncionarioEntity)
-        private userRepository: Repository<FuncionarioEntity>
+        private readonly funcionarioRepository: Repository<FuncionarioEntity>
       ){}
-      
-      create(user: FuncionarioDto): Promise<FuncionarioDto> { 
-        return this.userRepository.save(user);
-      }
     
-      findAll(): Promise<FuncionarioDto[]> {
-        return this.userRepository.find();;
+      async listaFuncionarios() {
+        const funcionarios = await this.funcionarioRepository.find();
+        return funcionarios.map(
+          (funcionario) => new FuncionarioDto(funcionario.id, funcionario.foto, funcionario.nome, funcionario.especialidade),
+        );
       }
       
 }
