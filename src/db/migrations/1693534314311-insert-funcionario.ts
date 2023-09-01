@@ -2,7 +2,7 @@ import { FuncionarioEntity } from '../../funcionario/entity/funcionario.entity'
 import { MigrationInterface, QueryRunner } from 'typeorm';
 import { v4 as uuid } from 'uuid';
 
-export class InsertFuncionario1693532969820 implements MigrationInterface {
+export class InsertFuncionario1693534314311 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<any> {
     const funcionarioRepo = queryRunner.connection.getRepository(FuncionarioEntity);
     await funcionarioRepo.insert([
