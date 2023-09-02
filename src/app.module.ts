@@ -3,6 +3,7 @@ import { FuncionarioModule } from './funcionario/funcionario.module';
 import { ConfigModule } from '@nestjs/config';
 import {TypeOrmModule} from '@nestjs/typeorm';
 import { PostgresConfigService } from './config/postgres.config.service';
+import { ServicoModule } from './servico/servico.module';
 
 @Module({
   imports: [
@@ -11,7 +12,8 @@ import { PostgresConfigService } from './config/postgres.config.service';
       useClass: PostgresConfigService,
       inject: [PostgresConfigService],
     }),
-    FuncionarioModule
+    FuncionarioModule,
+    ServicoModule
   ],
 })
 export class AppModule {}
