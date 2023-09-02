@@ -1,7 +1,9 @@
+import { ServicoEntity } from '../../servico/entity/servico.entity';
 import {
   Entity,
   Column,
   PrimaryGeneratedColumn,
+  OneToMany,
 } from 'typeorm';
 
 @Entity({ name:'funcionario'})
@@ -17,4 +19,7 @@ export class FuncionarioEntity {
 
   @Column({ name: 'especialidade', length: 255, nullable: false })
   especialidade: string;
+
+  @OneToMany(() => ServicoEntity, (servico) => servico.funcionario)
+  servicos: ServicoEntity[];
 }
