@@ -23,6 +23,9 @@ export class ServicoEntity {
   @Column({ name: 'preco', length: 50, nullable: false })
   preco: string;
 
+  @Column({ name: 'ordem', nullable: false })
+  ordem: number;
+
   @ManyToOne(() => FuncionarioEntity, (funcionario) => funcionario.servicos)
   funcionario: FuncionarioEntity;
 }

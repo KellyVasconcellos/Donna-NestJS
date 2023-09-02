@@ -12,9 +12,17 @@ export class ServicoService {
       ){}
     
       async listaServicos() {
-        const servicos = await this.servicoRepository.find();
-        return servicos.map(
-          (servico) => new ServicoDto(servico.id, servico.titulo, servico.descricao, servico.especifica_preco, servico.preco),
+        
+        const listaTodosServicos = await this.servicoRepository.query(`
+          SELECT * FROM (
+            SELECT DISTINCT ON (titulo) *
+            FROM public.servico 
+          ) t
+          ORDER BY ordem ASC
+        `);
+        
+        return listaTodosServicos.map(
+          (servico) => new ServicoDto(servico.id, servico.titulo, servico.descricao, servico.especifica_preco, servico.preco, servico.ordem),
         );
       }
       

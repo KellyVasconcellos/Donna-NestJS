@@ -9,6 +9,7 @@ export class ServicoController {
     @Get()
     async listaservicos(){
       const servicos = await this.servicoService.listaServicos();
+      
 
       return servicos;
     }
