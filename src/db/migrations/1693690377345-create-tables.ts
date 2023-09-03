@@ -221,7 +221,7 @@ export class CreateTables1693690377345 implements MigrationInterface {
           {
             id: uuid(),
             titulo: 'Maquiagem Social',
-            descricao: 'CMaquiagem manual.',
+            descricao: 'Maquiagem manual feita com pincel e esponja, neste procedimento é realizado o preparo da pele antes de receber a maquiagem(hidratação).',
             especifica_preco: '',
             preco: '350.00',
             ordem: 11,
@@ -233,7 +233,7 @@ export class CreateTables1693690377345 implements MigrationInterface {
             id: uuid(),
             titulo: 'Maquiagem Airbrush',
             descricao:
-              'Procedimento visa durabilidade e com efeito mais pesado, ideal para casamentos, formaturas e eventos.',
+              'Maquiagem com aerógrafo, este procedimento visa durabilidade e resulta um efeito mais pesado, ideal para casamentos, formaturas e eventos.',
             especifica_preco: '',
             preco: '650.00',
             ordem: 12,
@@ -245,7 +245,7 @@ export class CreateTables1693690377345 implements MigrationInterface {
           {
             id: uuid(),
             titulo: 'Esmaltação tradicional',
-            descricao: 'Mão e pé.',
+            descricao: 'Pintura simples das unhas da Mão e do pé.',
             especifica_preco: '',
             preco: '60.00',
             ordem: 13,
@@ -256,7 +256,7 @@ export class CreateTables1693690377345 implements MigrationInterface {
           {
             id: uuid(),
             titulo: 'Alongamento de unha de gel',
-            descricao: 'Extensão da unha e coloração.',
+            descricao: 'Extensão da unha e coloração tradicional.',
             especifica_preco: '',
             preco: '160.00',
             ordem: 14,
@@ -267,7 +267,7 @@ export class CreateTables1693690377345 implements MigrationInterface {
           {
             id: uuid(),
             titulo: 'Manutenção da unha de gel',
-            descricao: 'Inclui coloração.',
+            descricao: 'Neste processo inclui coloração tradicional.',
             especifica_preco: '',
             preco: '85.00',
             ordem: 15,
@@ -279,7 +279,7 @@ export class CreateTables1693690377345 implements MigrationInterface {
             id: uuid(),
             titulo: 'Blindagem',
             descricao:
-              'Película protetora de gel para reforçar as unhas, evitando quebras e lesões, inclui coloração.',
+              'Película protetora de gel para reforçar as unhas, evitando quebras e lesões, inclui coloração tradicional.',
             especifica_preco: '',
             preco: '120.00',
             ordem: 16,
@@ -290,7 +290,7 @@ export class CreateTables1693690377345 implements MigrationInterface {
           {
             id: uuid(),
             titulo: 'Podologia',
-            descricao: 'Para tratamentos específicos entrar em contato.',
+            descricao: 'Remoção de unhas encravadas (para demais tratamentos entrar em contato).',
             especifica_preco: '',
             preco: '120.00',
             ordem: 17,
