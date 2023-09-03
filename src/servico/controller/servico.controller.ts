@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param} from '@nestjs/common';
 import { ServicoService } from '../service/servico.service';
 
 @Controller('/servico')
@@ -7,10 +7,17 @@ export class ServicoController {
     constructor(private servicoService: ServicoService){}
   
     @Get()
-    async listaservicos(){
+    async listaServicos(){
       const servicos = await this.servicoService.listaServicos();
-      
 
       return servicos;
+    }
+
+    @Get('/:id')
+    async listaServicosPorFuncionario(
+      @Param('id') funcionarioId: string) {
+      const servicosPorFuncionario = await this.servicoService.listaServicosPorFuncionario(funcionarioId);
+
+      return servicosPorFuncionario;
     }
 }
