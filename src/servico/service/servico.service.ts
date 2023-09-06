@@ -39,21 +39,20 @@ export class ServicoService {
           },
         });
 
-        const response = listaServicosPorFuncionario.map(
-          (servico) => {
-            const servicoDtoArray = []
+        const servicoDtoArray: Array<ServicoDto> = []
 
+        const response = listaServicosPorFuncionario.forEach(
+          (servico) => {
+            
             const servicoDtoObjeto = new ServicoDto(servico.id, servico.titulo, servico.descricao, servico.especifica_preco, servico.preco)
 
             servicoDtoArray.push(servicoDtoObjeto)
-
-            const servicoFuncDtoObjeto = new ServicoFuncDto(servico.funcionario.id, servicoDtoArray)
-
-            return servicoFuncDtoObjeto
           } 
         );
+
+        const servicoFuncDtoObjeto = new ServicoFuncDto(idFuncionario, servicoDtoArray)
         
-        return response
+        return servicoFuncDtoObjeto
       }
       
 }
