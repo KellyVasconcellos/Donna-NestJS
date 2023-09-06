@@ -41,7 +41,7 @@ export class ServicoService {
 
         const servicoDtoArray: Array<ServicoDto> = []
 
-        const response = listaServicosPorFuncionario.forEach(
+        listaServicosPorFuncionario.forEach(
           (servico) => {
             
             const servicoDtoObjeto = new ServicoDto(servico.id, servico.titulo, servico.descricao, servico.especifica_preco, servico.preco)
