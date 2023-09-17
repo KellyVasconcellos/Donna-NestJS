@@ -12,7 +12,7 @@
 
 ## 🔖&nbsp; Sobre
 
-O projeto **Donna** é uma API back-end para agendamento de serviços de salão de beleza, atualmente o projeto se encontra na primeira fase: Listagem de funcionário e serviços.
+O projeto **Donna** é uma API back-end para agendamento de serviços de salão de beleza, atualmente o projeto se encontra na primeira fase: Listagem de funcionários e serviços.
 
 ---
 
@@ -30,9 +30,9 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 ```bash
     # Clonar o repositório
-    $ git clone https://github.com/KellyVasconcellos/Donna-Angular.git
+    $ git clone https://github.com/KellyVasconcellos/Donna-NestJS.git
     # Entrar no diretório
-    $ cd Donna-Angular
+    $ cd Donna-NestJS
 ```
 
 ## 🗂 Como inicializar o projeto
