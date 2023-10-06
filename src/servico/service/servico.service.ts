@@ -12,6 +12,11 @@ export class ServicoService {
         private readonly servicoRepository: Repository<ServicoEntity>
 
       ){}
+
+      async getServico(id:string){
+        const servico = await this.servicoRepository.findOneBy({ id });
+        return servico
+      }
     
       async listaServicos() {
         
