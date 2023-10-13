@@ -17,5 +17,10 @@ export class FuncionarioService {
           (funcionario) => new FuncionarioDto(funcionario.id, funcionario.foto, funcionario.nome, funcionario.especialidade),
         );
       }
+
+      async getFuncionario(id:string){
+        const funcionario = await this.funcionarioRepository.findOneBy({ id });
+        return funcionario
+      }
       
 }
