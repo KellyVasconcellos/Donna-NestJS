@@ -1,6 +1,7 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { AgendamentoService } from '../service/agendamento.service';
 import { AgendamentoDto } from '../dto/agendamento.dto';
+import { EditarAgendamentoDto } from '../dto/editar.dto';
 
 
 @Controller('/api/v1/donna/agendamento')
@@ -19,4 +20,24 @@ export class AgendamentoController {
         agendamento: agendamentoCadastrado,
       };
     }
+
+    @Post('/editar')
+    async editarAgendamento(@Body() editarAgendamento: EditarAgendamentoDto ){
+      const agendamentoCadastrado = await this.agendamentoService.editarAgendamento(editarAgendamento);
+  
+      return {
+        mensagem: 'Agendamento realizado com sucesso.',
+        editarAgendamento: agendamentoCadastrado,
+      };
+    }
+
+    @Get('/:id')
+    async listaAgendamentos(
+      @Param('id') id: string,
+    ){
+  
+      return await this.agendamentoService.listaAgendamento(id);
+    }
+    
 }
+
