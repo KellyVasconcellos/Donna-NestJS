@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
 import { AgendamentoService } from '../service/agendamento.service';
 import { AgendamentoDto } from '../dto/agendamento.dto';
 import { EditarAgendamentoDto } from '../dto/editar.dto';
@@ -21,7 +21,7 @@ export class AgendamentoController {
       };
     }
 
-    @Post('/editar')
+    @Put('/editar')
     async editarAgendamento(@Body() editarAgendamento: EditarAgendamentoDto ){
       const agendamentoCadastrado = await this.agendamentoService.editarAgendamento(editarAgendamento);
   
