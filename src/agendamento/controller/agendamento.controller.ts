@@ -31,13 +31,10 @@ export class AgendamentoController {
       };
     }
 
-    @Get('/:id')
-    async listaAgendamentos(
-      @Param('id') id: string,
-    ){
+    @Get()
+    async listaAgendamentos(){
   
-      return await this.agendamentoService.listaAgendamento(id);
+      return await this.agendamentoService.listaAgendamento();
     }
-    
 }
 

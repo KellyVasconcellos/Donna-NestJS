@@ -36,13 +36,9 @@ export class AgendamentoService {
     return this.agendamentoRepository.save(agendamentoEntity);
   }
 
-  async listaAgendamento(id:string) {
-        
-    const listaAgendamento = await this.agendamentoRepository.query(`
-    SELECT * FROM public.agendamento WHERE id_funcionario = '${id}'
-    `);
-    
-    return listaAgendamento;
+  async listaAgendamento() {
+            
+    return await this.agendamentoRepository.find();
   }
 
 }
