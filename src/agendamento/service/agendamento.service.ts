@@ -35,10 +35,4 @@ export class AgendamentoService {
 
     return this.agendamentoRepository.save(agendamentoEntity);
   }
-
-  async listaAgendamento() {
-            
-    return await this.agendamentoRepository.find();
-  }
-
 }

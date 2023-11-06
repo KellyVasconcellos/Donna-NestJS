@@ -30,11 +30,5 @@ export class AgendamentoController {
         editarAgendamento: agendamentoCadastrado,
       };
     }
-
-    @Get()
-    async listaAgendamentos(){
-  
-      return await this.agendamentoService.listaAgendamento();
-    }
 }
 
