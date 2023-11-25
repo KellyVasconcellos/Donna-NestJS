@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Param, Post, Put } from '@nestjs/common';
 import { AgendamentoService } from '../service/agendamento.service';
 import { AgendamentoDto } from '../dto/agendamento.dto';
 import { EditarAgendamentoDto } from '../dto/editar.dto';
@@ -30,5 +30,17 @@ export class AgendamentoController {
         editarAgendamento: agendamentoCadastrado,
       };
     }
+
+    @Delete('/:id')
+    async deletarAgendamento(
+      @Param('id') id: string,
+    ){
+      await this.agendamentoService.deletarAgendamento(id);
+      return {
+        mensagem: 'Agendamento deletado com sucesso.',
+      };
+    }
+
+
 }
 

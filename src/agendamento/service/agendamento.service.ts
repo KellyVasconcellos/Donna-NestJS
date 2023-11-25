@@ -35,4 +35,8 @@ export class AgendamentoService {
 
     return this.agendamentoRepository.save(agendamentoEntity);
   }
+
+  async deletarAgendamento(id: string){
+    this.agendamentoRepository.delete(id)
+  }
 }
