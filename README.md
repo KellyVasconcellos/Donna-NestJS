@@ -22,6 +22,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - [NestJS](https://nestjs.com)
 - [PostgreSQL](https://www.postgresql.org/)
+- [Docker](https://www.docker.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 
 ---
