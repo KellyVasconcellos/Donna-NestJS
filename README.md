@@ -40,7 +40,7 @@
 
 ## 🔖&nbsp; Sobre
 
-O projeto **Donna** é uma API back-end para agendamento de serviços de salão de beleza, atualmente o projeto se encontra na segunda fase: Realização de agendamento pelo cliente.
+O projeto **Donna** é uma API back-end para agendamento de serviços de salão de beleza, o projeto foi integrado com o banco de dados via Docker.
 
 ---
 
@@ -50,6 +50,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - [NestJS](https://nestjs.com)
 - [PostgreSQL](https://www.postgresql.org/)
+- [Docker](https://www.docker.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 
 ---
